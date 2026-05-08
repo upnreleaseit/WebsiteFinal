@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberSecurity Fundamentals</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a192f;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #64ffda;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(10,25,47,0.75), rgba(10,25,47,0.75)), url('https://www.image2url.com/r2/default/images/1778173786295-fc9fd753-4e4d-4cc6-b944-a430a3e44efe.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #64ffda;
+    }
+
+    .hero p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.9rem 1.5rem;
+      background: #64ffda;
+      color: #0a192f;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #0a192f;
+    }
+
+    .section-title h3 {
+      color: #0077b6;
+      margin-top: 0.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #0a192f;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h4 {
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      margin-top: 1rem;
+      background: #eef7ff;
+      padding: 1rem;
+      border-left: 5px solid #0077b6;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: #0a192f;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CyberSecurity Fundamentals</h1>
+  <nav>
+    <a href="#cia">CIA Triad</a>
+    <a href="#states">Data States</a>
+    <a href="#aaa">Auth (AAA)</a>
+    <a href="#passwords">Passwords</a>
+    <a href="#hashing">Hashing</a>
+    <a href="#methods">Auth Methods</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Understanding the CIA Triad & Authentication</h2>
+    <h3>Computer & Information Science - Seaway Tech</h3>
+    <p>
+      Explore the core principles every cybersecurity professional must know — 
+      Confidentiality, Integrity, Availability, and how we prove who we are in a digital world.
+    </p>
+    <a href="#cia" class="btn">Explore the Triad</a>
+    <a href="#aaa" class="btn">Learn Authentication</a>
+  </div>
+</section>
+
+<section id="cia">
+  <div class="section-title">
+    <h2>The CIA Framework</h2>
+    <h3>Core Framework</h3>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Confidentiality</h3>
+      <h4>Data is not revealed</h4>
+      <p>
+        Protection against unauthorized access. Only those with proper permission should ever be able to read or view the data.
+      </p>
+      <p>
+        Think of it as a locked diary — only the owner (or those granted access) can read it.
+      </p>
+      <div class="highlight">
+        <strong>REAL-WORLD BREACH</strong><br>
+        Edward Snowden's 2013 leak of classified NSA government data is a landmark example of a Confidentiality breach.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Integrity</h3>
+      <h4>Data is intact - not modified or corrupted</h4>
+      <p>
+        Protection against unauthorized modification. Data must remain accurate and trustworthy from the moment it is created until it is accessed.
+      </p>
+      <p>
+        If someone changes your grade in the grade book without permission, that's an Integrity breach.
+      </p>
+      <div class="highlight">
+        <strong>REAL-WORLD BREACH</strong><br>
+        The Stuxnet worm secretly altered code on Iranian centrifuge machines, causing them to spin too fast and physically break — a classic Integrity attack.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Availability</h3>
+      <h4>Data is accessible to allowed users</h4>
+      <p>
+        Protection against denial of service. Authorized users must be able to access data and systems whenever they legitimately need them.
+      </p>
+      <p>
+        A website that is always down, or an account that stays locked, fails the Availability test.
+      </p>
+      <div class="highlight">
+        <strong>REAL-WORLD BREACH</strong><br>
+        The Mirai Botnet used 145,000+ infected cameras and devices to flood Brian Krebs' website with traffic, crashing it for 4 days — a textbook DDoS / Availability breach.
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:2rem; text-align:center; font-weight:bold;">
+   
+  </p>
+</section>
+
+<section id="states">
+  <div class="section-title">
+    <h2>Protecting Data</h2>
+    <h3>Staying Safe Online</h3>
+  </div>
+  <img src="images/theThreeStatesOfData_1280x633.png" alt="three states of data"  style="width:100%; max-width:1400px; border-radius:12px;">
+</section>
+
+<section id="aaa">
+  <div class="section-title">
+    <h2>The AAA Security Model</h2>
+    <h3>Authentication, Access Control, and Accounting</h3>
+  </div>
+  </div>
+   <div style="text-align:center; margin-bottom:2rem;">
+  <img src="images/AuthenticationAccessAccounting_1280x567.png" alt="AAA"  style="width:100%; max-width:1400px; border-radius:12px;">
+  </div>
+</section>
+
+<section id="passwords">
+  <div class="section-title">
+        <h2>Password Attacks & How to Defend Yourself Against One </h2>
+        <h3>Brute Force, Password Spraying, and More</h3>
+    <p>
+    </p>
+  </div>
+
+  <div style="text-align:center; margin-bottom:2rem;">
+    <img src="images/passAttacks.png" alt="Password Attacks" style="width:100%; max-width:1400px; border-radius:12px;">
+  </div>
+
+  <div style="text-align:center; margin-bottom:2rem;">
+    <img src="images/passTable.png" alt="Password Strength Table" style="width:100%; max-width:1400px; border-radius:12px;">
+  </div>
+
+</section>
+
+<section id="hashing">
+  <div class="section-title">
+    <h2>Password Hashing & Salting</h2>
+   
+  </div>
+
+  <div style="text-align:center; margin-bottom:2rem;">
+    <img src="images/passHashSalt.png" alt="Password Hashing and Salting" style="width:100%; max-width:1400px; border-radius:12px;">
+  </div>
+</section>
+
+<section id="methods">
+  <div class="section-title">
+    <h2>Methods of Authentication</h2>
+    
+  </div>
+
+  <div style="text-align:center; margin-bottom:2rem;">
+    <img src="images/methodsAuth1.png" alt="Authentication Methods" style="width:100%; max-width:1400px; border-radius:12px;">
+  </div>
+</section>
+  <div class="section-title">
+    <h2>Authentication Methods</h2>
+    
+    <img src="images/methodsAuth2_1276x368.png" alt="Methods">
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-title">
+    <h2></h2>
+    <p></p>
+    <p></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 CyberSecurity Fundamentals | Seaway Tech</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
